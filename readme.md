@@ -10,6 +10,6 @@
 $ npm start CHAPTER_NUMBER
 ```
 
-| chapter | name |
-| :-----: | ---- |
-
+| chapter | name          |
+| :-----: | ------------- |
+|    1    | Hello, World! |
