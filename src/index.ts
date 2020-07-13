@@ -1,4 +1,5 @@
 import { Express } from "express";
+import prompt from "prompt-sync";
 
 async function bootstrap() {
     try {
@@ -13,7 +14,8 @@ async function bootstrap() {
         //
         // 주어진 챕터의 서버를 실행시킨다.
         const port = 3000;
-        const chapter = `./${formatNumber(Number(process.argv[2]))}/server.ts`;
+        const chapterNumber = Number(prompt()("Chapter Number : "));
+        const chapter = `./${formatNumber(chapterNumber)}/server.ts`;
         const app = (await import(chapter)).app as Express;
         app.listen(port, () => {
             //

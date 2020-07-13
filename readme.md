@@ -7,7 +7,7 @@
 실습 파일을 실행하려면 다음 명령어를 입력해주세요 :
 
 ```bash
-$ npm start CHAPTER_NUMBER
+$ npm start
 ```
 
 | chapter | name                       |
