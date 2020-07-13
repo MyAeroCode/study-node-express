@@ -17,3 +17,4 @@ $ npm start
 |    3    | `Middleware`               |
 |    4    | `Headers`, `Query`, `Body` |
 |    5    | `Error Handler`            |
+|    6    | `CORS`                     |
