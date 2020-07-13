@@ -6,3 +6,4 @@
 |    2    | `Routing`, `Route Handler` |
 |    3    | `Middleware`               |
 |    4    | `Headers`, `Query`, `Body` |
+|    5    | `Error Handler`            |
