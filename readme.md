@@ -19,3 +19,4 @@ $ npm start
 |    5    | `Error Handler`            |
 |    6    | `CORS`                     |
 |    7    | `Static File`              |
+|    8    | `Deploy to AWS Lambda`     |
