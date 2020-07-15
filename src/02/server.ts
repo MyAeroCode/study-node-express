@@ -129,6 +129,15 @@ app.use("/out", outerRouter);
 outerRouter.use("/in", innerRouter);
 
 /**
+ * URL Param
+ */
+
+app.get("/hello/:who", async function (req, res, next) {
+    const { who } = req.params;
+    res.send(`Hello, ${who}!`);
+});
+
+/**
  * Route Handler
  */
 

@@ -284,7 +284,7 @@ app.get(
 
 <br/>
 
-### Module Level Router
+### Module-Level Router
 
 `express.Router()`로 라우터 객체를 생성하고, `use()`로 라우터 객체를 적용시키는 것으로, 라우팅 경로를 `모듈 형태로 관리`할 수 있습니다.
 
@@ -350,6 +350,34 @@ outerRouter.use("/in", innerRouter);
 // 저렇게 해도 같다.
 outerRouter.use("/in", innerRouter);
 app.use("/out", outerRouter);
+```
+
+<br/>
+
+### URL Param
+
+`URL`의 일부를 입력으로 사용하는 것을 `URL Param`이라고 합니다. 예를 들어, `aerocode`의 상세정보를 조회하는 페이지의 주소를 다음과 같이 설계할 수 있겠죠.
+
+```text
+/userinfo/aerocode/details
+```
+
+<br/>
+
+이러한 기능을 구현하려면 `PATH`를 만들 때 2가지 규칙을 지켜야 합니다.
+
+-   `정적 경로`로 구성할 것.
+-   변수로 지정할 토큰의 앞에 `:`을 붙일 것.
+
+<br/>
+
+예를 들어, 처음에 들었던 예시를 구현하려면 다음과 같이 하면 됩니다.
+
+```ts
+app.get("/userinfo/:username/details", async function (req, res) {
+    const username = req.params.username;
+    res.send(fetchUser(username));
+});
 ```
 
 <br/>
