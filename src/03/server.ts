@@ -1,8 +1,17 @@
 import express, { RequestHandler } from "express";
+import http from "http";
 
 //
 // express의 기본 모듈을 사용하여 app 객체를 생성.
 export const app = express();
+
+//
+// server bootstrap function
+export function startServer() {
+    http.createServer(app).listen(3000, () => {
+        console.log("http://localhost:3000");
+    });
+}
 
 //
 // 랜덤값이 0.5보다 작다면 에러를 발생시키는 미들웨어.

@@ -1,8 +1,17 @@
 import express, { RequestHandler, ErrorRequestHandler } from "express";
+import http from "http";
 
 //
 // express의 기본 모듈을 사용하여 app 객체를 생성.
 export const app = express();
+
+//
+// server bootstrap function
+export function startServer() {
+    http.createServer(app).listen(3000, () => {
+        console.log("http://localhost:3000");
+    });
+}
 
 //
 // 커스텀 요청 핸들러

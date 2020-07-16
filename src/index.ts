@@ -1,4 +1,3 @@
-import { Express } from "express";
 import prompt from "prompt-sync";
 
 async function bootstrap() {
@@ -13,15 +12,10 @@ async function bootstrap() {
 
         //
         // 주어진 챕터의 서버를 실행시킨다.
-        const port = 3000;
         const chapterNumber = Number(prompt()("Chapter Number : "));
         const chapter = `./${formatNumber(chapterNumber)}/server.ts`;
-        const app = (await import(chapter)).app as Express;
-        app.listen(port, () => {
-            //
-            // 실행중인 서버의 경로를 출력한다.
-            console.log(`Server ready at http://localhost:${port}`);
-        });
+        const { startServer } = await import(chapter);
+        startServer();
     } catch (e) {
         console.error(e);
     }
