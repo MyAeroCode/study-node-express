@@ -20,3 +20,4 @@ $ npm start
 |    6    | `CORS`                     |
 |    7    | `Static File`              |
 |    8    | `Deploy to AWS Lambda`     |
+|    9    | `HTTPS`                    |
