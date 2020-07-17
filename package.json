@@ -28,6 +28,8 @@
         "@types/multer": "^1.4.3",
         "@types/node": "^14.0.22",
         "@types/prompt-sync": "^4.1.0",
+        "@types/socket.io": "^2.1.8",
+        "@types/socket.io-client": "^1.4.33",
         "@types/spdy": "^3.4.4",
         "serverless": "^1.74.1",
         "serverless-offline": "^6.4.0",
@@ -45,6 +47,8 @@
         "multer": "^1.4.2",
         "prompt-sync": "^4.2.0",
         "selfsigned": "^1.10.7",
+        "socket.io": "^2.3.0",
+        "socket.io-client": "^2.3.0",
         "spdy": "^4.0.2"
     }
 }
