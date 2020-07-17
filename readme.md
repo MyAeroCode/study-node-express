@@ -21,3 +21,4 @@ $ npm start
 |    7    | `Static File`              |
 |    8    | `Deploy to AWS Lambda`     |
 |    9    | `HTTPS`                    |
+|   10    | `HTTP2`                    |
