@@ -12,3 +12,4 @@
 |    8    | `Deploy to AWS Lambda`     |
 |    9    | `HTTPS`                    |
 |   10    | `HTTP2`                    |
+|   11    | `WebSocket`                |
